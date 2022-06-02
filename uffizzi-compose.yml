@@ -4,6 +4,9 @@ services:
       context: https://github.com/zipofar/uffizzi_chaos
       dockerfile: /Dockerfile
 
+  web:
+    image: nginx.latest 
+
 x-uffizzi:
   ingress:
     service: chaos
