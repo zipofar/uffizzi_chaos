@@ -1,17 +1,17 @@
 services:
   chaos:
-    build: 
+    build:
       context: https://github.com/zipofar/uffizzi_chaos
-      dockerfile: /Dockerfile
+      dockerfile: /sleeper/Dockerfile
 
   web:
-    image: nginx 
+    image: nginx
 
 x-uffizzi:
   ingress:
     service: chaos
     port: 80
-    
+
   continuous_preview:
     share_to_github: true
     delete_preview_after: 1h
