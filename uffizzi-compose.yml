@@ -2,10 +2,7 @@ services:
   chaos:
     build:
       context: https://github.com/zipofar/uffizzi_chaos
-      dockerfile: /always_exit/Dockerfile
-
-  web:
-    image: nginx
+      dockerfile: /sleep_nginx/Dockerfile
 
 x-uffizzi:
   ingress:
