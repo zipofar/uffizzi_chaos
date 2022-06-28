@@ -1,0 +1,9 @@
+services:
+  chaos:
+    build:
+      context: .
+      dockerfile: ./sleep_nginx/Dockerfile
+    ports:
+      - 8000:80
+    environment:
+      START_TIMEOUT: 1
