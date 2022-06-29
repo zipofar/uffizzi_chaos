@@ -3,6 +3,10 @@ services:
     build:
       context: https://github.com/zipofar/uffizzi_chaos
       dockerfile: /sleep_nginx/Dockerfile
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
 
 x-uffizzi:
   ingress:
